@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
 
+// traz o import para a linha de baixo, adiciona static, ou colocar asterisco
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
