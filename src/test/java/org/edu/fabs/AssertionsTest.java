@@ -1,9 +1,14 @@
 package org.edu.fabs;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 
 public class AssertionsTest {
 
@@ -15,17 +20,17 @@ public class AssertionsTest {
         int[] primeiroLancamento = {10, 20, 30, 40, 50};
         int[] segundoLancamento = {-1, 5, 2, 3, 10, 16, 17};
 
-        Assertions.assertNotEquals(primeiroLancamento, segundoLancamento);
+        assertNotEquals(primeiroLancamento, segundoLancamento);
     }
 
     @Test // objeto nulo
     void validarSeObjetoEstaNulo() {
 
         Pessoa pessoa = null;
-        Assertions.assertNull(pessoa);
+        assertNull(pessoa);
 
         pessoa = new Pessoa("Maria", LocalDateTime.now());
-        Assertions.assertNotNull(pessoa);
+        assertNotNull(pessoa);
 
     }
 
@@ -37,8 +42,8 @@ public class AssertionsTest {
         int inteiro1 = 10;
         int inteiro2 = 10;
 
-        Assertions.assertEquals(valor, outroValor);
-        Assertions.assertEquals(inteiro1, inteiro2);
+        assertEquals(valor, outroValor);
+        assertEquals(inteiro1, inteiro2);
     }
 
 }
